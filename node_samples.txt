@@ -1,0 +1,4 @@
+Class FirstScreen
+  Variable route = '/FirstScreen'
+  Method openPage (BuildContext context context, String payload payload): null
+  Method build (BuildContext context context): Widget
