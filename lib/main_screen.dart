@@ -24,7 +24,11 @@ class _MainScreenState extends State<MainScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-                'Данное приложение является демонстрационным. \nЕго цель представить ваш dart class в виде json массива.'),
+              'Данное приложение является демонстрационным. '
+              '\nЕго цель представить ваш dart class в виде json массива.'
+              '\nВ текущей версии поддерживаются только свойства.'
+              ,
+            ),
             SelectFolder(onSelectFile: onSelectFile),
             Expanded(
               child: SingleChildScrollView(
