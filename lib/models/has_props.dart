@@ -48,11 +48,11 @@ class HasProps {
   };
 
   static HasProps fromJson(Map<String, dynamic> json) => HasProps(
-    hasToString: json['hasToString'],
-    hasToMap: json['hasToMap'],
-    hasToJson: json['hasToJson'],
-    hasFromJson: json['hasFromJson'],
-    hasCopyWith: json['hasCopyWith'],
+    hasToString: json['hasToString'] as bool,
+    hasToMap: json['hasToMap'] as bool,
+    hasToJson: json['hasToJson'] as bool,
+    hasFromJson: json['hasFromJson'] as bool,
+    hasCopyWith: json['hasCopyWith'] as bool,
   );
 
   String toString() =>

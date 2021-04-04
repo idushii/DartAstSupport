@@ -1,7 +1,7 @@
 include: package:pedantic/analysis_options.1.8.0.yaml
 
 analyzer:
-  exclude: [build/**, example.dart, example2.dart]
+  exclude: [ build/**,assets/** ]
   strong-mode:
     implicit-casts: false
 

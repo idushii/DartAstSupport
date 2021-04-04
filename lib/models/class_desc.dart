@@ -30,9 +30,9 @@ class ClassDesc {
       {"name": name, "fields": fields, "hasProps": hasProps};
 
   static ClassDesc fromJson(Map<String, dynamic> json) => ClassDesc(
-    name: json['name'],
-    fields: json['fields'],
-    hasProps: json['hasProps'],
+    name: json['name'] as String,
+    fields: json['fields'] as List<FieldDesc>,
+    hasProps: json['hasProps'] as HasProps,
   );
 
   String toString() =>
