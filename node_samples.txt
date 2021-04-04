@@ -1,4 +1,19 @@
-Class FirstScreen
-  Variable route = '/FirstScreen'
-  Method openPage (BuildContext context context, String payload payload): null
+Class QrScanScreen
+  Variable route = '/QrScanScreen'
+  Method createState (): _QrScanScreenState
+Class _QrScanScreenState
+  Variable qrText = ''
+  Variable flashState = flashOn
+  Variable cameraState = frontCamera
+  Variable controller
+  Variable qrKey = GlobalKey(debugLabel: 'QR')
+  Variable warning1 = null
+  Variable warning2 = false
+  Variable loading = false
+  Variable _subscription
+  Method didChangeDependencies (): void
   Method build (BuildContext context context): Widget
+  Method _buildQrView (BuildContext context context): Widget
+  Method _onQRViewCreated (QRViewController controller controller): void
+  Method showError1 (String error error): null
+  Method dispose (): void

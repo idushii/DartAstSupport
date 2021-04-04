@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
             Text(
               'Данное приложение является демонстрационным. '
               '\nЕго цель представить ваш dart class в виде json массива.'
-              '\nВ текущей версии поддерживаются только свойства.'
+              '\nВ текущей версии поддерживаются только свойства класса.'
               ,
             ),
             SelectFolder(onSelectFile: onSelectFile),

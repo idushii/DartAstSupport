@@ -25,7 +25,7 @@ class _SelectFolderState extends State<SelectFolder> {
   String path = '';
   String textAst = '';
 
-  get textFolder => path.isNotEmpty ? path : "Не выбран файл";
+  String get textFolder => path.isNotEmpty ? path : "Не выбран файл";
 
   @override
   Widget build(BuildContext context) {
