@@ -1,12 +1,31 @@
 import 'package:dart_ast_support/main_screen.dart';
+import 'package:dart_ast_support/select_folder_screen.dart';
+import 'package:dart_ast_support/server/server.dart';
+import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+
+  startServer();
+
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  @override
+  Future<void> didChangeDependencies() async {
+    super.didChangeDependencies();
+
+    await DesktopWindow.setWindowSize(Size(600, 800));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainScreen(),
+      home: SelectFolderScreen(),
+      // home: MainScreen(),
     );
   }
 }

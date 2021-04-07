@@ -107,16 +107,17 @@ ClassDesc printMembers(CompilationUnit unit) {
           // classMember.fields.
 
           final _name = classMember.fields.variables[0].name.name;
-          final _type = classMember.fields.type.toString();
-          final _keyword = classMember.fields.keyword.toString();
-          final _defaultValues =
-              classMember.fields.variables[0].initializer.toString();
+          final _type = (classMember.fields.type ?? '').toString();
+          final _keyword = (classMember.fields.keyword ?? '').toString();
+          final _defaultValues = (classMember.fields.variables[0].initializer ?? '').toString();
+          final _isStatic = classMember.isStatic;
 
           fields.add(FieldDesc(
             name: _name,
             type: _type,
             keyword: _keyword,
             defaultValues: _defaultValues,
+            isStatic: _isStatic,
           ));
 
           for (VariableDeclaration field in classMember.fields.variables) {
